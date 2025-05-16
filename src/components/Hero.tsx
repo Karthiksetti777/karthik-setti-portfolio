@@ -1,0 +1,64 @@
+
+import { Button } from '@/components/ui/button';
+import { ArrowRight, Shield, Key, Lock } from 'lucide-react';
+
+const Hero = () => {
+  return (
+    <div className="min-h-screen bg-white dark:bg-security-primary relative overflow-hidden flex items-center">
+      {/* Background gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-white/90 to-transparent dark:from-security-primary/90 dark:to-transparent z-10"></div>
+      
+      {/* Abstract background pattern */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmMGYwZjAiIGZpbGwtb3BhY2l0eT0iMC40Ij48cGF0aCBkPSJNMzYgMzRjMC0yLjIgMS44LTQgNC00czQgMS44IDQgNC0xLjggNC00IDQtNC0xLjgtNC00bTAtMTZjMC0yLjIgMS44LTQgNC00czQgMS44IDQgNGMwIDIuMi0xLjggNC00IDRzLTQtMS44LTQtNG0tMTYgMGMwLTIuMiAxLjgtNCA0LTRzNCAxLjggNCA0YzAgMi4yLTEuOCA0LTQgNC0yLjIgMC00LTEuOC00LTRtLTE2IDBjMC0yLjIgMS44LTQgNC00czQgMS44IDQgNGMwIDIuMi0xLjggNC00IDQtMi4yIDAtNC0xLjgtNC00bTE2IDE2YzAtMi4yIDEuOC00IDQtNHM0IDEuOCA0IDRjMCAyLjItMS44IDQtNCA0LTIuMiAwLTQtMS44LTQtNG0tMTYgMGMwLTIuMiAxLjgtNCA0LTRzNCAxLjggNCA0YzAgMi4yLTEuOCA0LTQgNC0yLjIgMC00LTEuOC00LTRNNCAxMmMwLTIuMiAxLjgtNCA0LTRzNCAxLjggNCA0YzAgMi4yLTEuOCA0LTQgNC0yLjIgMC00LTEuOC00LTRtMTYgMGMwLTIuMiAxLjgtNCA0LTRzNCAxLjggNCA0YzAgMi4yLTEuOCA0LTQgNC0yLjIgMC00LTEuOC00LTRtLTE2IDE2YzAtMi4yIDEuOC00IDQtNHM0IDEuOCA0IDRjMCAyLjItMS44IDQtNCA0LTIuMiAwLTQtMS44LTQtNCIvPjwvZz48L2c+PC9zdmc+')]"></div>
+      
+      <div className="container mx-auto px-6 md:px-12 lg:px-24 relative z-20 flex flex-col md:flex-row items-center">
+        <div className="md:w-1/2 space-y-6 md:pr-10">
+          <div className="animate-on-scroll">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-security-primary dark:text-white">
+              Karthik Setti
+            </h1>
+            <h2 className="text-xl md:text-2xl font-medium mb-6 text-security-secondary dark:text-gray-300">
+              Application Security Engineer | IAM Specialist
+            </h2>
+            <p className="text-2xl md:text-3xl font-bold gradient-text mb-8">
+              Designing Secure Systems with Identity Governance and Automation.
+            </p>
+            <Button 
+              className="bg-security-accent hover:bg-security-accent/80 text-white font-medium px-6 py-2 rounded-md flex items-center gap-2 mt-6"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Let's Connect <ArrowRight size={16} />
+            </Button>
+          </div>
+        </div>
+        
+        <div className="md:w-1/2 mt-10 md:mt-0 flex justify-center">
+          <div className="relative">
+            {/* Placeholder for profile image */}
+            <div className="w-64 h-64 md:w-80 md:h-80 bg-gray-300 rounded-full overflow-hidden border-4 border-security-accent shadow-xl">
+              {/* Replace with actual image when available */}
+              <div className="w-full h-full flex items-center justify-center text-gray-500">
+                Profile Photo
+              </div>
+            </div>
+            
+            {/* Floating icons */}
+            <div className="absolute -top-4 -right-4 w-14 h-14 bg-white dark:bg-security-secondary rounded-full flex items-center justify-center shadow-lg floating">
+              <Shield className="text-security-accent" size={24} />
+            </div>
+            
+            <div className="absolute -bottom-2 -left-4 w-12 h-12 bg-white dark:bg-security-secondary rounded-full flex items-center justify-center shadow-lg floating" style={{animationDelay: "1.5s"}}>
+              <Key className="text-security-accent" size={20} />
+            </div>
+            
+            <div className="absolute top-1/4 -right-10 w-10 h-10 bg-white dark:bg-security-secondary rounded-full flex items-center justify-center shadow-lg floating" style={{animationDelay: "2.5s"}}>
+              <Lock className="text-security-accent" size={18} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Hero;
