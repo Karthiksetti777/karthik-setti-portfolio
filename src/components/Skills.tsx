@@ -35,7 +35,7 @@ const Skills = () => {
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {skillCategories.map((category, index) => (
-          <div key={index} className="animate-on-scroll">
+          <div key={index} className="animate-on-scroll backdrop-blur-sm bg-white/50 dark:bg-security-secondary/50 p-6 rounded-lg border border-gray-100 dark:border-gray-700 shadow-md hover:shadow-xl transition-all duration-300">
             <h3 className="text-xl font-semibold mb-4 text-security-primary dark:text-white flex items-center">
               <span className="w-2 h-6 bg-security-accent mr-2"></span>
               {category.category}
@@ -45,7 +45,7 @@ const Skills = () => {
               {category.skills.map((skill, i) => (
                 <Badge 
                   key={i} 
-                  className="bg-white dark:bg-security-secondary text-security-primary dark:text-white border border-gray-200 dark:border-gray-700 py-1.5 px-3"
+                  className="bg-white dark:bg-security-secondary text-security-primary dark:text-white border border-gray-200 dark:border-gray-700 py-1.5 px-3 hover:bg-security-accent hover:text-white transition-colors duration-300"
                 >
                   {skill}
                 </Badge>

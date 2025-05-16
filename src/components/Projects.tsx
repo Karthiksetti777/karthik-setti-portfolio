@@ -43,23 +43,32 @@ const Projects = () => {
         {projects.map((project, index) => (
           <Card 
             key={index} 
-            className="shadow-lg hover:shadow-xl transition-shadow border-t-4 border-security-accent animate-on-scroll"
+            className="shadow-lg hover:shadow-2xl transition-all duration-500 border-t-4 border-security-accent animate-on-scroll bg-white dark:bg-security-secondary group hover:-translate-y-2"
           >
-            <CardHeader className="pb-4">
-              <div className="mb-4">{project.icon}</div>
-              <CardTitle>{project.title}</CardTitle>
+            <CardHeader className="pb-4 relative overflow-hidden">
+              <div className="absolute inset-0 bg-security-accent/5 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+              <div className="relative z-10">
+                <div className="mb-4 bg-security-accent/10 p-4 rounded-full inline-block group-hover:bg-security-accent/20 transition-colors duration-300">
+                  {project.icon}
+                </div>
+                <CardTitle className="text-security-primary dark:text-white text-xl">{project.title}</CardTitle>
+              </div>
             </CardHeader>
-            <CardContent>
-              <CardDescription className="text-base mb-4">
+            <CardContent className="relative z-10">
+              <CardDescription className="text-base mb-4 text-gray-700 dark:text-gray-300">
                 {project.description}
               </CardDescription>
-              <div className="bg-security-accent/10 p-3 rounded-md text-security-primary font-medium">
-                Result: {project.result}
+              <div className="bg-security-accent/10 p-4 rounded-md text-security-primary dark:text-white font-medium">
+                <span className="font-bold">Result:</span> {project.result}
               </div>
             </CardContent>
-            <CardFooter className="flex flex-wrap gap-2">
+            <CardFooter className="flex flex-wrap gap-2 pt-4 relative z-10">
               {project.tags.map((tag, i) => (
-                <Badge key={i} variant="secondary" className="bg-gray-100 text-security-secondary">
+                <Badge 
+                  key={i} 
+                  variant="secondary" 
+                  className="bg-gray-100 text-security-secondary dark:bg-gray-700 dark:text-gray-200 hover:bg-security-accent/20 transition-colors"
+                >
                   {tag}
                 </Badge>
               ))}

@@ -44,14 +44,14 @@ const Services = () => {
         {services.map((service, index) => (
           <Card 
             key={index}
-            className="border border-gray-200 hover:border-security-accent hover:shadow-md transition-all animate-on-scroll"
+            className="border border-gray-200 dark:border-gray-700 group hover:border-security-accent hover:shadow-xl transition-all animate-on-scroll backdrop-blur-sm bg-white/80 dark:bg-security-secondary/80"
           >
             <CardContent className="p-6 flex flex-col items-center text-center">
-              <div className="mb-4 p-3 rounded-full bg-security-accent/10">
+              <div className="mb-4 p-4 rounded-full bg-security-accent/10 group-hover:bg-security-accent/20 transform transition-transform duration-300 group-hover:scale-110">
                 {service.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-              <p className="text-gray-600">{service.description}</p>
+              <h3 className="text-xl font-semibold mb-2 text-security-primary dark:text-white group-hover:text-security-accent transition-colors">{service.title}</h3>
+              <p className="text-gray-600 dark:text-gray-300">{service.description}</p>
             </CardContent>
           </Card>
         ))}

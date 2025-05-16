@@ -38,23 +38,25 @@ const Experience = () => {
         <div className="timeline-container ml-4">
           {experiences.map((exp, index) => (
             <div key={index} className="timeline-item animate-on-scroll">
-              <Card className="shadow-md border-l-4 border-security-accent">
+              <Card className="shadow-lg hover:shadow-xl border-l-4 border-security-accent transform transition-all duration-300 hover:translate-x-1">
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-2 mb-2">
-                    <Briefcase className="h-5 w-5 text-security-accent" />
-                    <h3 className="text-xl font-semibold">{exp.title}</h3>
+                    <div className="bg-security-accent/20 p-2 rounded-full">
+                      <Briefcase className="h-5 w-5 text-security-accent" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-security-primary dark:text-white">{exp.title}</h3>
                   </div>
                   
                   <div className="mb-3">
-                    <p className="text-lg font-medium">{exp.company}</p>
-                    <p className="text-sm text-gray-600">{exp.location} | {exp.period}</p>
+                    <p className="text-lg font-medium text-gray-800 dark:text-gray-200">{exp.company}</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 italic">{exp.location} | {exp.period}</p>
                   </div>
                   
                   <ul className="space-y-2">
                     {exp.responsibilities.map((item, i) => (
-                      <li key={i} className="flex items-start">
-                        <span className="w-2 h-2 bg-security-accent rounded-full mt-2 mr-2"></span>
-                        <span>{item}</span>
+                      <li key={i} className="flex items-start group">
+                        <span className="w-2 h-2 bg-security-accent rounded-full mt-2 mr-2 group-hover:scale-125 transition-transform"></span>
+                        <span className="text-gray-700 dark:text-gray-300">{item}</span>
                       </li>
                     ))}
                   </ul>
