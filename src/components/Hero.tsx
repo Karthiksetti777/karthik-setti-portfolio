@@ -5,8 +5,8 @@ import { ArrowRight, Shield, Key, Lock } from 'lucide-react';
 const Hero = () => {
   return (
     <div className="min-h-screen bg-white dark:bg-security-primary relative overflow-hidden flex items-center">
-      {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-white/90 to-transparent dark:from-security-primary/90 dark:to-transparent z-10"></div>
+      {/* Background gradient overlay with pastel colors */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#E5DEFF]/90 to-[#D3E4FD]/70 dark:from-security-primary/90 dark:to-[#0c2249]/80 z-10"></div>
       
       {/* Abstract background pattern with enhanced visual effect */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmMGYwZjAiIGZpbGwtb3BhY2l0eT0iMC40Ij48cGF0aCBkPSJNMzYgMzRjMC0yLjIgMS44LTQgNC00czQgMS44IDQgNC0xLjggNC00IDQtNC0xLjgtNC00bTAtMTZjMC0yLjIgMS44LTQgNC00czQgMS44IDQgNGMwIDIuMi0xLjggNC00IDRzLTQtMS44LTQtNG0tMTYgMGMwLTIuMiAxLjgtNCA0LTRzNCAxLjggNCA0YzAgMi4yLTEuOCA0LTQgNC0yLjIgMC00LTEuOC00LTRtLTE2IDBjMC0yLjIgMS44LTQgNC00czQgMS44IDQgNGMwIDIuMi0xLjggNC00IDQtMi4yIDAtNC0xLjgtNC00bTE2IDE2YzAtMi4yIDEuOC00IDQtNHM0IDEuOCA0IDRjMCAyLjItMS44IDQtNCA0LTIuMiAwLTQtMS44LTQtNG0tMTYgMGMwLTIuMiAxLjgtNCA0LTRzNCAxLjggNCA0YzAgMi4yLTEuOCA0LTQgNC0yLjIgMC00LTEuOC00LTRNNCAxMmMwLTIuMiAxLjgtNCA0LTRzNCAxLjggNCA0YzAgMi4yLTEuOCA0LTQgNC0yLjIgMC00LTEuOC00LTRtMTYgMGMwLTIuMiAxLjgtNCA0LTRzNCAxLjggNCA0YzAgMi4yLTEuOCA0LTQgNC0yLjIgMC00LTEuOC00LTRtLTE2IDE2YzAtMi4yIDEuOC00IDQtNHM0IDEuOCA0IDRjMCAyLjItMS44IDQtNCA0LTIuMiAwLTQtMS44LTQtNCIvPjwvZz48L2c+PC9zdmc+')]"></div>
@@ -34,12 +34,13 @@ const Hero = () => {
         
         <div className="md:w-1/2 mt-10 md:mt-0 flex justify-center">
           <div className="relative">
-            {/* Enhanced profile image container with better shadows and border effects */}
-            <div className="w-64 h-64 md:w-80 md:h-80 bg-gray-300 rounded-full overflow-hidden border-4 border-security-accent shadow-[0_0_30px_rgba(0,191,178,0.3)] transition-transform duration-700 hover:scale-105">
-              {/* Replace with actual image when available */}
-              <div className="w-full h-full flex items-center justify-center text-gray-500">
-                Profile Photo
-              </div>
+            {/* Profile image with your photo */}
+            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-security-accent shadow-[0_0_30px_rgba(0,191,178,0.3)] transition-transform duration-700 hover:scale-105">
+              <img 
+                src="https://i.postimg.cc/3xRCt8ks/1747197770177.jpg" 
+                alt="Karthik Setti" 
+                className="w-full h-full object-cover"
+              />
             </div>
             
             {/* Enhanced floating icons with better animation */}

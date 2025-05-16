@@ -1,5 +1,5 @@
 
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -40,27 +40,27 @@ const Portfolio = () => {
           <Hero />
         </section>
         
-        <section id="about" className="py-20 px-6 md:px-12 lg:px-24 bg-section-gradient">
+        <section id="about" className="py-20 px-6 md:px-12 lg:px-24 bg-[#E5DEFF]/30 dark:bg-[#0c1a36]/50">
           <About />
         </section>
         
-        <section id="experience" className="py-20 px-6 md:px-12 lg:px-24">
+        <section id="experience" className="py-20 px-6 md:px-12 lg:px-24 bg-[#D3E4FD]/40 dark:bg-security-primary/80">
           <Experience />
         </section>
         
-        <section id="projects" className="py-20 px-6 md:px-12 lg:px-24 bg-section-gradient">
+        <section id="projects" className="py-20 px-6 md:px-12 lg:px-24 bg-[#FDE1D3]/30 dark:bg-[#0c1a36]/50">
           <Projects />
         </section>
         
-        <section id="services" className="py-20 px-6 md:px-12 lg:px-24">
+        <section id="services" className="py-20 px-6 md:px-12 lg:px-24 bg-[#F1F0FB]/50 dark:bg-security-primary/80">
           <Services />
         </section>
         
-        <section id="skills" className="py-20 px-6 md:px-12 lg:px-24 bg-section-gradient">
+        <section id="skills" className="py-20 px-6 md:px-12 lg:px-24 bg-[#FFDEE2]/20 dark:bg-[#0c1a36]/50">
           <Skills />
         </section>
         
-        <section id="contact" className="py-20 px-6 md:px-12 lg:px-24">
+        <section id="contact" className="py-20 px-6 md:px-12 lg:px-24 bg-[#E5DEFF]/30 dark:bg-security-primary/80">
           <Contact />
         </section>
       </main>
