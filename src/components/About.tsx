@@ -31,7 +31,7 @@ const About = () => {
                   <h3 className="text-lg font-semibold mb-1 text-security-primary dark:text-white">Education</h3>
                   <p className="font-medium">M.S. in Computer Science</p>
                   <p className="text-sm text-gray-600 dark:text-gray-400">University of North Texas</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">08/2023 – 05/2025 (Expected)</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">08/2023 – 05/2025</p>
                 </div>
               </div>
             </CardContent>
