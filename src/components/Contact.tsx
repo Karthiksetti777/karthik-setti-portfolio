@@ -1,44 +1,68 @@
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { Phone, Mail, MapPin, Linkedin } from "lucide-react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const { toast } = useToast();
+  const formRef = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
     message: ""
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission logic would go here in a real implementation
     
-    // Show success toast
-    toast({
-      title: "Message Sent",
-      description: "Thank you! I'll get back to you soon.",
-      variant: "default",
-    });
-    
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: ""
-    });
+    try {
+      setIsSubmitting(true);
+      
+      // Use EmailJS to send the form
+      await emailjs.sendForm(
+        'service_0mbs2lc', // Your Service ID
+        'template_contact_form', // Your Template ID (you'll need to create this in EmailJS)
+        formRef.current!,
+        'EwDUqW7vqZIQi5UNY' // Your Public Key
+      );
+      
+      // Show success toast
+      toast({
+        title: "Message Sent",
+        description: "Thank you! I'll get back to you soon.",
+        variant: "default",
+      });
+      
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: ""
+      });
+    } catch (error) {
+      // Show error toast
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again later.",
+        variant: "destructive",
+      });
+      console.error("EmailJS error:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -111,7 +135,7 @@ const Contact = () => {
             <CardContent className="p-6">
               <h3 className="text-xl font-semibold mb-4 pb-2 border-b border-gray-200 dark:border-gray-700 text-security-primary dark:text-white">Send a Message</h3>
               
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <label htmlFor="name" className="font-medium text-security-primary dark:text-white">Name</label>
@@ -171,8 +195,9 @@ const Contact = () => {
                 <Button 
                   type="submit"
                   className="w-full md:w-auto bg-security-accent hover:bg-security-accent/80 text-white shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                  disabled={isSubmitting}
                 >
-                  Send Message
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </CardContent>
