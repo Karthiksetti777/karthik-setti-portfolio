@@ -64,17 +64,6 @@ const Contact = () => {
                 </div>
               ))}
             </div>
-            
-            <div className="mt-10 flex justify-center">
-              <a 
-                href="https://karthik-setti.lovable.dev" 
-                className="inline-flex items-center px-6 py-3 bg-security-accent text-white rounded-md hover:bg-security-accent/80 transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View Karthik Setti Portfolio
-              </a>
-            </div>
           </CardContent>
         </Card>
       </div>
