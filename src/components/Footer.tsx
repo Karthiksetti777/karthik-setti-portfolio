@@ -1,5 +1,6 @@
 
-import { Linkedin, Mail } from "lucide-react";
+import { Linkedin, Mail, FileText } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   return (
@@ -11,7 +12,17 @@ const Footer = () => {
             <p className="text-gray-300">Identity and Access Management Engineer II</p>
           </div>
           
-          <div className="flex space-x-4">
+          <div className="flex space-x-6 items-center">
+            <Button 
+              variant="ghost" 
+              className="text-white hover:bg-security-primary/70 hover:text-security-accent transition-colors p-2"
+              onClick={() => {
+                window.open('https://docs.google.com/document/d/1YUQAOetDNNUwkjJY_HwJTovyVcMjYWilDmLnK1jNhe0/edit?usp=sharing', '_blank');
+              }}
+            >
+              <FileText size={18} className="mr-2" /> Resume
+            </Button>
+            
             <a 
               href="https://linkedin.com/in/karthik-setti-765ba4200" 
               target="_blank" 
