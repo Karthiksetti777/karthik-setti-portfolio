@@ -46,6 +46,14 @@ const Footer = () => {
         
         <div className="text-center text-gray-400 text-sm">
           <p>© {new Date().getFullYear()} Karthik Setti. All rights reserved.</p>
+          <a 
+            href="https://karthik-setti.lovable.dev" 
+            className="text-security-accent hover:underline mt-2 inline-block"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Karthik Setti Portfolio
+          </a>
         </div>
       </div>
     </footer>

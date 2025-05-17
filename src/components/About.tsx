@@ -10,7 +10,7 @@ const About = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div className="md:col-span-2 animate-on-scroll">
           <p className="text-lg mb-6 leading-relaxed text-gray-700 dark:text-gray-300">
-            Karthik Setti is an IAM Engineer with 4+ years of experience in identity security, application development, and IAM tool deployment. He has a strong focus on SailPoint IdentityIQ, Okta, PingFederate, and secure integration with enterprise infrastructure. Currently pursuing a Master's in Computer Science at the University of North Texas (expected May 2025).
+            Karthik Setti is an IAM Engineer with 4+ years of experience in identity security, application development, and IAM tool deployment. He has a strong focus on SailPoint IdentityIQ, Okta, PingFederate, and secure integration with enterprise infrastructure. Currently pursuing a Master's in Computer Science at the University of North Texas.
           </p>
           <p className="text-lg mb-6 leading-relaxed text-gray-700 dark:text-gray-300">
             With expertise in implementing robust identity governance solutions and automating security processes, Karthik has helped organizations streamline access management while maintaining compliance with regulatory requirements.

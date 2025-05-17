@@ -35,7 +35,7 @@ const Contact = () => {
     <div className="container mx-auto">
       <h2 className="section-title animate-on-scroll">Contact</h2>
       
-      <div className="max-w-3xl mx-auto animate-on-scroll">
+      <div className="max-w-4xl mx-auto animate-on-scroll">
         <Card className="shadow-lg hover:shadow-xl transition-all duration-300 border-t-2 border-security-accent bg-white/80 dark:bg-security-secondary/80 backdrop-blur-sm">
           <CardContent className="p-8">
             <h3 className="text-2xl font-semibold mb-8 pb-2 border-b border-gray-200 dark:border-gray-700 text-security-primary dark:text-white">Get In Touch</h3>
@@ -63,6 +63,17 @@ const Contact = () => {
                   </div>
                 </div>
               ))}
+            </div>
+            
+            <div className="mt-10 flex justify-center">
+              <a 
+                href="https://karthik-setti.lovable.dev" 
+                className="inline-flex items-center px-6 py-3 bg-security-accent text-white rounded-md hover:bg-security-accent/80 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Karthik Setti Portfolio
+              </a>
             </div>
           </CardContent>
         </Card>
