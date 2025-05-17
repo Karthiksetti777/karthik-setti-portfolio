@@ -1,5 +1,5 @@
 
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Linkedin, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <h3 className="text-xl font-bold">Karthik Setti</h3>
-            <p className="text-gray-300">Application Security Engineer | IAM Specialist</p>
+            <p className="text-gray-300">Identity and Access Management Engineer II</p>
           </div>
           
           <div className="flex space-x-4">
@@ -22,25 +22,11 @@ const Footer = () => {
               <Linkedin size={20} />
             </a>
             <a 
-              href="#" 
+              href="#contact" 
               className="text-white hover:text-security-accent transition-colors"
-              aria-label="Twitter"
+              aria-label="Contact"
             >
-              <Twitter size={20} />
-            </a>
-            <a 
-              href="#" 
-              className="text-white hover:text-security-accent transition-colors"
-              aria-label="Facebook"
-            >
-              <Facebook size={20} />
-            </a>
-            <a 
-              href="#" 
-              className="text-white hover:text-security-accent transition-colors"
-              aria-label="Instagram"
-            >
-              <Instagram size={20} />
+              <Mail size={20} />
             </a>
           </div>
         </div>

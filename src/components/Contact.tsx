@@ -33,7 +33,7 @@ const Contact = () => {
       // Use EmailJS to send the form
       await emailjs.sendForm(
         'service_0mbs2lc', // Your Service ID
-        'template_contact_form', // Your Template ID (you'll need to create this in EmailJS)
+        '__ejs-test-mail-service__', // Updated Template ID
         formRef.current!,
         'EwDUqW7vqZIQi5UNY' // Your Public Key
       );
@@ -96,31 +96,32 @@ const Contact = () => {
     <div className="container mx-auto">
       <h2 className="section-title animate-on-scroll">Contact</h2>
       
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div className="md:col-span-1 animate-on-scroll">
-          <Card className="shadow-lg hover:shadow-xl transition-all duration-300 border-t-2 border-security-accent bg-white/80 dark:bg-security-secondary/80 backdrop-blur-sm">
-            <CardContent className="p-6">
-              <h3 className="text-xl font-semibold mb-6 pb-2 border-b border-gray-200 dark:border-gray-700 text-security-primary dark:text-white">Get In Touch</h3>
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+        {/* Enlarged contact info box: now spans 2/5 columns instead of 1/3 */}
+        <div className="md:col-span-2 animate-on-scroll">
+          <Card className="shadow-lg hover:shadow-xl transition-all duration-300 border-t-2 border-security-accent bg-white/80 dark:bg-security-secondary/80 backdrop-blur-sm h-full">
+            <CardContent className="p-8">
+              <h3 className="text-2xl font-semibold mb-8 pb-2 border-b border-gray-200 dark:border-gray-700 text-security-primary dark:text-white">Get In Touch</h3>
               
-              <div className="space-y-6">
+              <div className="space-y-8">
                 {contactInfo.map((item, index) => (
                   <div key={index} className="flex items-start group hover:translate-x-1 transition-transform duration-300">
-                    <div className="mt-1 mr-3 bg-security-accent/10 p-2 rounded-full group-hover:bg-security-accent/20 transition-colors">
+                    <div className="mt-1 mr-4 bg-security-accent/10 p-3 rounded-full group-hover:bg-security-accent/20 transition-colors">
                       {item.icon}
                     </div>
                     <div>
-                      <p className="font-medium text-security-primary dark:text-white">{item.label}</p>
+                      <p className="font-medium text-lg text-security-primary dark:text-white">{item.label}</p>
                       {item.href ? (
                         <a 
                           href={item.href} 
-                          className="text-security-accent hover:underline hover:text-security-accent/80 transition-colors"
+                          className="text-security-accent hover:underline hover:text-security-accent/80 transition-colors text-base"
                           target={item.label === "LinkedIn" ? "_blank" : undefined}
                           rel={item.label === "LinkedIn" ? "noopener noreferrer" : undefined}
                         >
                           {item.value}
                         </a>
                       ) : (
-                        <p className="text-gray-700 dark:text-gray-300">{item.value}</p>
+                        <p className="text-gray-700 dark:text-gray-300 text-base">{item.value}</p>
                       )}
                     </div>
                   </div>
@@ -130,7 +131,8 @@ const Contact = () => {
           </Card>
         </div>
         
-        <div className="md:col-span-2 animate-on-scroll">
+        {/* Form section now spans 3/5 columns instead of 2/3 */}
+        <div className="md:col-span-3 animate-on-scroll">
           <Card className="shadow-lg hover:shadow-xl transition-all duration-300">
             <CardContent className="p-6">
               <h3 className="text-xl font-semibold mb-4 pb-2 border-b border-gray-200 dark:border-gray-700 text-security-primary dark:text-white">Send a Message</h3>

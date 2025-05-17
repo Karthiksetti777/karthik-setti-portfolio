@@ -1,6 +1,6 @@
 
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Shield, Key, Lock } from 'lucide-react';
+import { ArrowRight, Shield, Key, Lock, Download } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -23,12 +23,31 @@ const Hero = () => {
             <p className="text-2xl md:text-3xl font-bold gradient-text mb-8 bg-clip-text text-transparent bg-gradient-to-r from-security-primary to-security-accent">
               Designing Secure Systems with Identity Governance and Automation.
             </p>
-            <Button 
-              className="bg-security-accent hover:bg-security-accent/80 text-white font-medium px-6 py-6 rounded-md flex items-center gap-2 mt-6 shadow-lg transition-all duration-300 hover:translate-y-[-2px]"
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Let's Connect <ArrowRight size={16} />
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 mt-6">
+              <Button 
+                className="bg-security-accent hover:bg-security-accent/80 text-white font-medium px-6 py-6 rounded-md flex items-center gap-2 shadow-lg transition-all duration-300 hover:translate-y-[-2px]"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Let's Connect <ArrowRight size={16} />
+              </Button>
+              
+              <Button 
+                className="bg-white dark:bg-security-secondary hover:bg-gray-100 dark:hover:bg-security-secondary/80 text-security-primary dark:text-white font-medium px-6 py-6 rounded-md flex items-center gap-2 border border-gray-200 dark:border-gray-700 shadow-lg transition-all duration-300 hover:translate-y-[-2px]"
+                onClick={() => {
+                  // Create anchor element for download
+                  const a = document.createElement('a');
+                  a.href = '/Karthik_Setti_Resume.pdf'; // Add your resume path here
+                  a.download = 'Karthik_Setti_Resume.pdf';
+                  a.target = '_blank';
+                  a.rel = 'noopener noreferrer';
+                  document.body.appendChild(a);
+                  a.click();
+                  document.body.removeChild(a);
+                }}
+              >
+                Resume <Download size={16} />
+              </Button>
+            </div>
           </div>
         </div>
         
