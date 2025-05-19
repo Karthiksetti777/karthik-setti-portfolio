@@ -20,7 +20,7 @@ const Hero = () => {
             <h2 className="text-xl md:text-2xl font-medium mb-6 text-security-secondary dark:text-gray-300">
               Identity and Access Management Engineer II
             </h2>
-            <p className="text-lg md:text-2xl lg:text-[1.9rem] font-bold gradient-text mb-8 bg-clip-text text-transparent bg-gradient-to-r from-security-primary to-security-accent">
+            <p className="text-base md:text-xl lg:text-[1.7rem] font-bold gradient-text mb-8 bg-clip-text text-transparent bg-gradient-to-r from-security-primary to-security-accent">
               I design and implement identity-driven security solutions to streamline access, automate workflows, and ensure compliance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-6">
