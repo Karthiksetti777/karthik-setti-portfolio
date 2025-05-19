@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Shield, Key, Lock, Download } from 'lucide-react';
 
@@ -20,7 +21,7 @@ const Hero = () => {
               Identity and Access Management Engineer II
             </h2>
             <p className="text-2xl md:text-3xl font-bold gradient-text mb-8 bg-clip-text text-transparent bg-gradient-to-r from-security-primary to-security-accent">
-              Designing Secure Systems with Identity Governance and Automation.
+              I design and implement identity-driven security solutions to streamline access, automate workflows, and ensure compliance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-6">
               <Button 
