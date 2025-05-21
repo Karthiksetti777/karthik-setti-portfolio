@@ -1,5 +1,5 @@
 
-import { Linkedin, Mail, FileText } from "lucide-react";
+import { Linkedin, Github, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Footer = () => {
@@ -33,11 +33,13 @@ const Footer = () => {
               <Linkedin size={20} />
             </a>
             <a 
-              href="#contact" 
+              href="https://github.com/Karthiksetti777" 
+              target="_blank" 
+              rel="noopener noreferrer"
               className="text-white hover:text-security-accent transition-colors"
-              aria-label="Contact"
+              aria-label="GitHub"
             >
-              <Mail size={20} />
+              <Github size={20} />
             </a>
           </div>
         </div>
