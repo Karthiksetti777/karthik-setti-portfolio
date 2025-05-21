@@ -34,7 +34,7 @@ const Hero = () => {
               <Button 
                 className="bg-white dark:bg-security-secondary hover:bg-gray-100 dark:hover:bg-security-secondary/80 text-security-primary dark:text-white font-medium px-6 py-6 rounded-md flex items-center gap-2 border border-gray-200 dark:border-gray-700 shadow-lg transition-all duration-300 hover:translate-y-[-2px]"
                 onClick={() => {
-                  window.open('https://docs.google.com/document/d/1YUQAOetDNNUwkjJY_HwJTovyVcMjYWilDmLnK1jNhe0/edit?usp=sharing', '_blank');
+                  window.open('https://docs.google.com/document/d/1p3OpgDPYUKzPR7NmTiLCr5DUmYyvZK4JcrTeGU7diGc/edit?usp=sharing', '_blank');
                 }}
               >
                 Resume <Download size={16} />

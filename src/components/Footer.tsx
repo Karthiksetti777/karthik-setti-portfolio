@@ -17,7 +17,7 @@ const Footer = () => {
               variant="ghost" 
               className="text-white hover:bg-security-primary/70 hover:text-security-accent transition-colors p-2"
               onClick={() => {
-                window.open('https://docs.google.com/document/d/1YUQAOetDNNUwkjJY_HwJTovyVcMjYWilDmLnK1jNhe0/edit?usp=sharing', '_blank');
+                window.open('https://docs.google.com/document/d/1p3OpgDPYUKzPR7NmTiLCr5DUmYyvZK4JcrTeGU7diGc/edit?usp=sharing', '_blank');
               }}
             >
               <FileText size={18} className="mr-2" /> Resume

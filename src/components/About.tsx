@@ -45,7 +45,7 @@ const About = () => {
                   <ul className="space-y-2">
                     <li className="flex items-center">
                       <span className="w-2 h-2 bg-security-accent rounded-full mr-2"></span>
-                      <span className="text-gray-700 dark:text-gray-300">Introduction to Threat Hunting</span>
+                      <span className="text-gray-700 dark:text-gray-300">AWS Certified Solutions Architect – Associate</span>
                     </li>
                     <li className="flex items-center">
                       <span className="w-2 h-2 bg-security-accent rounded-full mr-2"></span>
