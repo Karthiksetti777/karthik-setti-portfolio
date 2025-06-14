@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { GraduationCap, Award } from "lucide-react";
 
@@ -10,7 +9,7 @@ const About = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div className="md:col-span-2 animate-on-scroll">
           <p className="text-lg mb-6 leading-relaxed text-gray-700 dark:text-gray-300">
-            I am an Identity and Access Management (IAM) Engineer with over 4 years of hands-on experience in designing, implementing, and managing secure identity solutions across enterprise environments. My expertise spans SailPoint IdentityIQ, Okta, and PingFederate, with a strong focus on integrating these platforms seamlessly with enterprise infrastructure to enhance security and operational efficiency. I have completed my Master's degree in Computer Science from the University of North Texas, where I further strengthened my technical and strategic capabilities.
+            I am an Identity and Access Management (IAM) Engineer with over 5 years of hands-on experience in designing, implementing, and managing secure identity solutions across enterprise environments. My expertise spans SailPoint IdentityIQ, Okta, and PingFederate, with a strong focus on integrating these platforms seamlessly with enterprise infrastructure to enhance security and operational efficiency. I have completed my Master's degree in Computer Science from the University of North Texas, where I further strengthened my technical and strategic capabilities.
           </p>
           <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
             Throughout my career, I've led the deployment and automation of identity governance frameworks, enabling organizations to enforce compliance, improve access lifecycle management, and reduce security risks. I take pride in building secure authentication systems, developing custom IAM automation tools, and driving end-to-end integrations that align with both business goals and regulatory standards.
