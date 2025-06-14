@@ -1,7 +1,54 @@
+
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Shield, Key, Lock, Download } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 const Hero = () => {
+  const [nameText, setNameText] = useState('');
+  const [titleText, setTitleText] = useState('');
+  const [showCursor, setShowCursor] = useState(true);
+  
+  const fullName = 'Karthik Setti';
+  const fullTitle = 'Identity and Access Management Engineer II';
+  
+  useEffect(() => {
+    // Cursor blinking effect
+    const cursorInterval = setInterval(() => {
+      setShowCursor(prev => !prev);
+    }, 500);
+    
+    // Type name first
+    let nameIndex = 0;
+    const nameInterval = setInterval(() => {
+      if (nameIndex < fullName.length) {
+        setNameText(fullName.slice(0, nameIndex + 1));
+        nameIndex++;
+      } else {
+        clearInterval(nameInterval);
+        // Start typing title after name is complete
+        let titleIndex = 0;
+        const titleInterval = setInterval(() => {
+          if (titleIndex < fullTitle.length) {
+            setTitleText(fullTitle.slice(0, titleIndex + 1));
+            titleIndex++;
+          } else {
+            clearInterval(titleInterval);
+            // Stop cursor blinking after both animations complete
+            setTimeout(() => {
+              clearInterval(cursorInterval);
+              setShowCursor(false);
+            }, 1000);
+          }
+        }, 50);
+      }
+    }, 100);
+    
+    return () => {
+      clearInterval(cursorInterval);
+      clearInterval(nameInterval);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-white dark:bg-security-primary relative overflow-hidden flex items-center">
       {/* Background gradient overlay with pastel colors */}
@@ -13,11 +60,13 @@ const Hero = () => {
       <div className="container mx-auto px-6 md:px-12 lg:px-24 relative z-20 flex flex-col md:flex-row items-center">
         <div className="md:w-1/2 space-y-6 md:pr-10">
           <div className="animate-on-scroll">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-security-primary dark:text-white">
-              Karthik Setti
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-security-primary dark:text-white min-h-[4rem] md:min-h-[5rem] lg:min-h-[6rem]">
+              {nameText}
+              {showCursor && <span className="animate-pulse">|</span>}
             </h1>
-            <h2 className="text-xl md:text-2xl font-medium mb-6 text-security-secondary dark:text-gray-300">
-              Identity and Access Management Engineer II
+            <h2 className="text-xl md:text-2xl font-medium mb-6 text-security-secondary dark:text-gray-300 min-h-[2rem] md:min-h-[3rem]">
+              {titleText}
+              {nameText === fullName && showCursor && <span className="animate-pulse">|</span>}
             </h2>
             <p className="text-base md:text-xl lg:text-[1.7rem] font-bold gradient-text mb-8 bg-clip-text text-transparent bg-gradient-to-r from-security-primary to-security-accent">
               I design and implement identity-driven security solutions to streamline access, automate workflows, and ensure compliance.
