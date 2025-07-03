@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Shield, Key, Lock, Download } from 'lucide-react';
 import { useState, useEffect } from 'react';
@@ -93,11 +92,11 @@ const Hero = () => {
         
         <div className="md:w-1/2 mt-10 md:mt-0 flex justify-center">
           <div className="relative">
-            {/* Profile image with your photo */}
+            {/* Profile image with the new IAM-themed photo */}
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-security-accent shadow-[0_0_30px_rgba(0,191,178,0.3)] transition-transform duration-700 hover:scale-105">
               <img 
-                src="https://i.postimg.cc/3xRCt8ks/1747197770177.jpg" 
-                alt="Karthik Setti" 
+                src="/lovable-uploads/e1511203-5426-4a4d-9ae8-90fc18c318f4.png" 
+                alt="Karthik Setti - IAM Professional" 
                 className="w-full h-full object-cover"
               />
             </div>
