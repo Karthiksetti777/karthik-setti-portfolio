@@ -95,7 +95,7 @@ const Hero = () => {
             {/* Profile image with the new IAM-themed photo */}
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-security-accent shadow-[0_0_30px_rgba(0,191,178,0.3)] transition-transform duration-700 hover:scale-105 flex items-center justify-center">
               <img 
-                src="/lovable-uploads/e1511203-5426-4a4d-9ae8-90fc18c318f4.png" 
+                src="https://i.postimg.cc/GmTpDwGC/IMG-3809.jpg" 
                 alt="Karthik Setti - IAM Professional" 
                 className="w-full h-full object-cover object-center"
               />
