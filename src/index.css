@@ -212,7 +212,88 @@
 /* Subtle grid pattern overlay */
 .tech-grid {
   background-image:
-    linear-gradient(hsl(var(--accent) / 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, hsl(var(--accent) / 0.07) 1px, transparent 1px);
-  background-size: 40px 40px;
+    linear-gradient(hsl(var(--accent) / 0.09) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--accent) / 0.09) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 85%);
+}
+
+/* ===== Cybersecurity pastel hero background ===== */
+.cyber-pastel-bg {
+  background:
+    radial-gradient(ellipse at 20% 10%, hsl(190 70% 88%) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 20%, hsl(160 60% 86%) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 85%, hsl(250 70% 90%) 0%, transparent 55%),
+    linear-gradient(135deg, hsl(220 40% 14%) 0%, hsl(225 45% 18%) 50%, hsl(215 50% 16%) 100%);
+  background-size: 200% 200%, 200% 200%, 200% 200%, 100% 100%;
+  animation: pastel-shift 22s ease-in-out infinite;
+}
+
+@keyframes pastel-shift {
+  0%, 100% { background-position: 0% 0%, 100% 0%, 50% 100%, 0 0; }
+  50% { background-position: 100% 50%, 0% 50%, 30% 60%, 0 0; }
+}
+
+/* Aurora blobs */
+.aurora {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(90px);
+  opacity: 0.5;
+  z-index: 0;
+  mix-blend-mode: screen;
+  will-change: transform;
+}
+.aurora-1 {
+  width: 520px; height: 520px;
+  top: -120px; left: -100px;
+  background: radial-gradient(circle, hsl(180 90% 75%) 0%, transparent 70%);
+  animation: aurora-float 18s ease-in-out infinite;
+}
+.aurora-2 {
+  width: 480px; height: 480px;
+  bottom: -120px; right: -80px;
+  background: radial-gradient(circle, hsl(260 85% 80%) 0%, transparent 70%);
+  animation: aurora-float 22s ease-in-out infinite reverse;
+}
+.aurora-3 {
+  width: 380px; height: 380px;
+  top: 30%; right: 25%;
+  background: radial-gradient(circle, hsl(150 80% 78%) 0%, transparent 70%);
+  animation: aurora-float 26s ease-in-out infinite;
+  animation-delay: -6s;
+}
+
+@keyframes aurora-float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(60px, -40px) scale(1.1); }
+  66% { transform: translate(-40px, 50px) scale(0.95); }
+}
+
+/* Floating particles */
+.particle {
+  position: absolute;
+  width: 4px; height: 4px;
+  border-radius: 9999px;
+  background: hsl(var(--accent-glow) / 0.7);
+  box-shadow: 0 0 8px hsl(var(--accent-glow) / 0.8);
+  animation: particle-rise linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes particle-rise {
+  0% { transform: translateY(20px) scale(0.6); opacity: 0; }
+  20% { opacity: 0.9; }
+  100% { transform: translateY(-120vh) scale(1); opacity: 0; }
+}
+
+/* Diagonal scan-line sheen */
+.scanline {
+  background: linear-gradient(115deg, transparent 40%, hsl(0 0% 100% / 0.05) 50%, transparent 60%);
+  background-size: 200% 200%;
+  animation: scan 9s linear infinite;
+}
+@keyframes scan {
+  0% { background-position: -100% 0; }
+  100% { background-position: 200% 0; }
 }

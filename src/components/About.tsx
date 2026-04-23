@@ -16,7 +16,7 @@ const About = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div className="md:col-span-2 animate-on-scroll space-y-5">
           <p className="text-lg leading-relaxed text-foreground/85">
-            I am an <span className="font-semibold text-accent">SSO Cloud Solutions Engineer</span> with 5+ years of hands-on experience designing, deploying, and operating enterprise identity platforms across hybrid cloud environments. My focus is on <strong>federation, lifecycle automation, and production-grade reliability</strong> using PingFederate, Okta, SailPoint IdentityIQ, Microsoft Entra ID, and CyberArk.
+            I am an <span className="font-semibold text-accent">IAM Engineer II</span> with 5+ years of hands-on experience designing, deploying, and operating enterprise identity platforms across hybrid cloud environments. My focus is on <strong>federation, lifecycle automation, and production-grade reliability</strong> using PingFederate, Okta, SailPoint IdentityIQ, Microsoft Entra ID, and CyberArk.
           </p>
           <p className="text-lg leading-relaxed text-foreground/85">
             I architect OAuth 2.0, OIDC, and SAML 2.0 flows for customer-facing and workforce applications, harden authentication with MFA and phishing-resistant credentials, and automate identity governance to enforce SOX, HIPAA, and GDPR compliance. I hold an M.S. in Computer Science from the University of North Texas.
