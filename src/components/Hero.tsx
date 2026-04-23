@@ -56,15 +56,15 @@ const Hero = () => {
             <p className="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider uppercase rounded-full bg-accent/15 text-accent border border-accent/30">
               Available for new opportunities
             </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white min-h-[4rem] md:min-h-[5rem] lg:min-h-[6rem]">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-primary-foreground min-h-[4rem] md:min-h-[5rem] lg:min-h-[6rem]">
               {nameText}
               {showCursor && nameText !== fullName && <span className="text-accent animate-pulse">|</span>}
             </h1>
-            <h2 className="text-base md:text-xl font-medium mb-6 text-slate-300 min-h-[3rem] md:min-h-[3.5rem] leading-relaxed">
+            <h2 className="text-base md:text-xl font-medium mb-6 text-primary-foreground/80 min-h-[3rem] md:min-h-[3.5rem] leading-relaxed">
               <span className="gradient-text font-semibold">{titleText}</span>
               {nameText === fullName && showCursor && <span className="text-accent animate-pulse">|</span>}
             </h2>
-            <p className="text-base md:text-lg text-slate-300/90 mb-8 max-w-2xl leading-relaxed">
+            <p className="text-base md:text-lg text-primary-foreground/80 mb-8 max-w-2xl leading-relaxed">
               Enterprise SSO • OAuth / OIDC / SAML • Hybrid Cloud Identity • Production Support.
               I design and operate identity-driven security solutions that scale to <span className="text-accent font-semibold">25,000+ users</span> and <span className="text-accent font-semibold">30+ enterprise applications</span>.
             </p>
