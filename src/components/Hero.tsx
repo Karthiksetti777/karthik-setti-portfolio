@@ -8,7 +8,7 @@ const Hero = () => {
   const [showCursor, setShowCursor] = useState(true);
 
   const fullName = 'Karthik Setti';
-  const fullTitle = 'SSO Cloud Solutions Engineer | Ping | Okta | SailPoint | Entra ID | CyberArk';
+  const fullTitle = 'IAM Engineer II | Ping | Okta | SailPoint | Entra ID | CyberArk';
 
   useEffect(() => {
     const cursorInterval = setInterval(() => setShowCursor(p => !p), 500);
@@ -43,12 +43,30 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="min-h-screen relative overflow-hidden flex items-center animated-gradient">
+    <div className="min-h-screen relative overflow-hidden flex items-center cyber-pastel-bg">
+      {/* Animated aurora blobs */}
+      <div className="aurora aurora-1" />
+      <div className="aurora aurora-2" />
+      <div className="aurora aurora-3" />
       {/* Tech grid overlay */}
-      <div className="absolute inset-0 tech-grid opacity-60 z-10" />
-      {/* Soft radial glow */}
-      <div className="absolute top-1/3 -left-32 w-[500px] h-[500px] rounded-full bg-accent/20 blur-3xl z-0" />
-      <div className="absolute bottom-0 right-0 w-[420px] h-[420px] rounded-full bg-accent-glow/20 blur-3xl z-0" />
+      <div className="absolute inset-0 tech-grid opacity-40 z-10" />
+      {/* Floating particles */}
+      <div className="absolute inset-0 z-10 pointer-events-none">
+        {[...Array(18)].map((_, i) => (
+          <span
+            key={i}
+            className="particle"
+            style={{
+              left: `${(i * 53) % 100}%`,
+              top: `${(i * 37) % 100}%`,
+              animationDelay: `${(i % 6) * 1.2}s`,
+              animationDuration: `${8 + (i % 5) * 2}s`,
+            }}
+          />
+        ))}
+      </div>
+      {/* Scan line sheen */}
+      <div className="absolute inset-0 scanline z-10 pointer-events-none" />
 
       <div className="container mx-auto px-6 md:px-12 lg:px-24 relative z-20 flex flex-col md:flex-row items-center py-24">
         <div className="md:w-3/5 space-y-6 md:pr-10">
