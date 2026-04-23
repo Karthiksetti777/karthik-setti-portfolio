@@ -1,22 +1,18 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Shield, Key, Lock, Download } from 'lucide-react';
+import { ArrowRight, Shield, Key, Lock, Download, Github, Linkedin } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 const Hero = () => {
   const [nameText, setNameText] = useState('');
   const [titleText, setTitleText] = useState('');
   const [showCursor, setShowCursor] = useState(true);
-  
+
   const fullName = 'Karthik Setti';
-  const fullTitle = 'Identity and Access Management Engineer II';
-  
+  const fullTitle = 'SSO Cloud Solutions Engineer | Ping | Okta | SailPoint | Entra ID | CyberArk';
+
   useEffect(() => {
-    // Cursor blinking effect
-    const cursorInterval = setInterval(() => {
-      setShowCursor(prev => !prev);
-    }, 500);
-    
-    // Type name first
+    const cursorInterval = setInterval(() => setShowCursor(p => !p), 500);
+
     let nameIndex = 0;
     const nameInterval = setInterval(() => {
       if (nameIndex < fullName.length) {
@@ -24,7 +20,6 @@ const Hero = () => {
         nameIndex++;
       } else {
         clearInterval(nameInterval);
-        // Start typing title after name is complete
         let titleIndex = 0;
         const titleInterval = setInterval(() => {
           if (titleIndex < fullTitle.length) {
@@ -32,16 +27,15 @@ const Hero = () => {
             titleIndex++;
           } else {
             clearInterval(titleInterval);
-            // Stop cursor blinking after both animations complete
             setTimeout(() => {
               clearInterval(cursorInterval);
               setShowCursor(false);
             }, 1000);
           }
-        }, 50);
+        }, 30);
       }
-    }, 100);
-    
+    }, 90);
+
     return () => {
       clearInterval(cursorInterval);
       clearInterval(nameInterval);
@@ -49,69 +43,93 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-security-primary relative overflow-hidden flex items-center">
-      {/* Background gradient overlay with pastel colors */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#E5DEFF]/90 to-[#D3E4FD]/70 dark:from-security-primary/90 dark:to-[#0c2249]/80 z-10"></div>
-      
-      {/* Abstract background pattern with enhanced visual effect */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmMGYwZjAiIGZpbGwtb3BhY2l0eT0iMC40Ij48cGF0aCBkPSJNMzYgMzRjMC0yLjIgMS44LTQgNC00czQgMS44IDQgNC0xLjggNC00IDQtNC0xLjgtNC00bTAtMTZjMC0yLjIgMS44LTQgNC00czQgMS44IDQgNGMwIDIuMi0xLjggNC00IDRzLTQtMS44LTQtNG0tMTYgMGMwLTIuMiAxLjgtNCA0LTRzNCAxLjggNCA0YzAgMi4yLTEuOCA0LTQgNC0yLjIgMC00LTEuOC00LTRtLTE2IDBjMC0yLjIgMS44LTQgNC00czQgMS44IDQgNGMwIDIuMi0xLjggNC00IDQtMi4yIDAtNC0xLjgtNC00bTE2IDE2YzAtMi4yIDEuOC00IDQtNHM0IDEuOCA0IDRjMCAyLjItMS44IDQtNCA0LTIuMiAwLTQtMS44LTQtNG0tMTYgMGMwLTIuMiAxLjgtNCA0LTRzNCAxLjggNCA0YzAgMi4yLTEuOCA0LTQgNC0yLjIgMC00LTEuOC00LTRNNCAxMmMwLTIuMiAxLjgtNCA0LTRzNCAxLjggNCA0YzAgMi4yLTEuOCA0LTQgNC0yLjIgMC00LTEuOC00LTRtMTYgMGMwLTIuMiAxLjgtNCA0LTRzNCAxLjggNCA0YzAgMi4yLTEuOCA0LTQgNC0yLjIgMC00LTEuOC00LTRtLTE2IDE2YzAtMi4yIDEuOC00IDQtNHM0IDEuOCA0IDRjMCAyLjItMS44IDQtNCA0LTIuMiAwLTQtMS44LTQtNCIvPjwvZz48L2c+PC9zdmc+')]"></div>
-      
-      <div className="container mx-auto px-6 md:px-12 lg:px-24 relative z-20 flex flex-col md:flex-row items-center">
-        <div className="md:w-1/2 space-y-6 md:pr-10">
+    <div className="min-h-screen relative overflow-hidden flex items-center animated-gradient">
+      {/* Tech grid overlay */}
+      <div className="absolute inset-0 tech-grid opacity-60 z-10" />
+      {/* Soft radial glow */}
+      <div className="absolute top-1/3 -left-32 w-[500px] h-[500px] rounded-full bg-accent/20 blur-3xl z-0" />
+      <div className="absolute bottom-0 right-0 w-[420px] h-[420px] rounded-full bg-accent-glow/20 blur-3xl z-0" />
+
+      <div className="container mx-auto px-6 md:px-12 lg:px-24 relative z-20 flex flex-col md:flex-row items-center py-24">
+        <div className="md:w-3/5 space-y-6 md:pr-10">
           <div className="animate-on-scroll">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-security-primary dark:text-white min-h-[4rem] md:min-h-[5rem] lg:min-h-[6rem]">
-              {nameText}
-              {showCursor && <span className="animate-pulse">|</span>}
-            </h1>
-            <h2 className="text-xl md:text-2xl font-medium mb-6 text-security-secondary dark:text-gray-300 min-h-[2rem] md:min-h-[3rem]">
-              {titleText}
-              {nameText === fullName && showCursor && <span className="animate-pulse">|</span>}
-            </h2>
-            <p className="text-base md:text-xl lg:text-[1.7rem] font-bold gradient-text mb-8 bg-clip-text text-transparent bg-gradient-to-r from-security-primary to-security-accent">
-              I design and implement identity-driven security solutions to streamline access, automate workflows, and ensure compliance.
+            <p className="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider uppercase rounded-full bg-accent/15 text-accent border border-accent/30">
+              Available for new opportunities
             </p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white min-h-[4rem] md:min-h-[5rem] lg:min-h-[6rem]">
+              {nameText}
+              {showCursor && nameText !== fullName && <span className="text-accent animate-pulse">|</span>}
+            </h1>
+            <h2 className="text-base md:text-xl font-medium mb-6 text-slate-300 min-h-[3rem] md:min-h-[3.5rem] leading-relaxed">
+              <span className="gradient-text font-semibold">{titleText}</span>
+              {nameText === fullName && showCursor && <span className="text-accent animate-pulse">|</span>}
+            </h2>
+            <p className="text-base md:text-lg text-slate-300/90 mb-8 max-w-2xl leading-relaxed">
+              Enterprise SSO • OAuth / OIDC / SAML • Hybrid Cloud Identity • Production Support.
+              I design and operate identity-driven security solutions that scale to <span className="text-accent font-semibold">25,000+ users</span> and <span className="text-accent font-semibold">30+ enterprise applications</span>.
+            </p>
+
             <div className="flex flex-col sm:flex-row gap-4 mt-6">
-              <Button 
-                className="bg-security-accent hover:bg-security-accent/80 text-white font-medium px-6 py-6 rounded-md flex items-center gap-2 shadow-lg transition-all duration-300 hover:translate-y-[-2px]"
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Let's Connect <ArrowRight size={16} />
-              </Button>
-              
-              <Button 
-                className="bg-white dark:bg-security-secondary hover:bg-gray-100 dark:hover:bg-security-secondary/80 text-security-primary dark:text-white font-medium px-6 py-6 rounded-md flex items-center gap-2 border border-gray-200 dark:border-gray-700 shadow-lg transition-all duration-300 hover:translate-y-[-2px]"
-                onClick={() => {
-                  window.open('https://drive.google.com/file/d/1Q0F98HSAX-DaKvoVlvWnnh91UH-MqoeJ/view?usp=sharing', '_blank');
-                }}
+              <div className="relative inline-block rounded-md glow-cta">
+                <Button
+                  className="relative bg-gradient-accent hover:opacity-95 text-accent-foreground font-medium px-6 py-6 rounded-md flex items-center gap-2 shadow-lg transition-all duration-300 hover:translate-y-[-2px] border-0"
+                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                >
+                  Let's Connect <ArrowRight size={16} />
+                </Button>
+              </div>
+
+              <Button
+                variant="outline"
+                className="bg-white/5 hover:bg-white/10 text-white font-medium px-6 py-6 rounded-md flex items-center gap-2 border border-white/20 backdrop-blur-sm shadow-lg transition-all duration-300 hover:translate-y-[-2px]"
+                onClick={() => window.open('https://drive.google.com/file/d/1Q0F98HSAX-DaKvoVlvWnnh91UH-MqoeJ/view?usp=sharing', '_blank')}
               >
                 Resume <Download size={16} />
               </Button>
             </div>
+
+            <div className="flex items-center gap-4 mt-8">
+              <a
+                href="https://linkedin.com/in/karthik-setti-765ba4200"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-white/5 border border-white/20 flex items-center justify-center text-white hover:bg-accent hover:border-accent hover:scale-110 transition-all duration-300"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={18} />
+              </a>
+              <a
+                href="https://github.com/Karthiksetti777"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-white/5 border border-white/20 flex items-center justify-center text-white hover:bg-accent hover:border-accent hover:scale-110 transition-all duration-300"
+                aria-label="GitHub"
+              >
+                <Github size={18} />
+              </a>
+            </div>
           </div>
         </div>
-        
-        <div className="md:w-1/2 mt-10 md:mt-0 flex justify-center">
+
+        <div className="md:w-2/5 mt-10 md:mt-0 flex justify-center">
           <div className="relative">
-            {/* Profile image with the new IAM-themed photo */}
-            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-security-accent shadow-[0_0_30px_rgba(0,191,178,0.3)] transition-transform duration-700 hover:scale-105 flex items-center justify-center">
-              <img 
-                src="https://i.postimg.cc/GmTpDwGC/IMG-3809.jpg" 
-                alt="Karthik Setti - IAM Professional" 
+            <div className="absolute inset-0 rounded-full bg-gradient-accent blur-2xl opacity-40 animate-pulse-slow" />
+            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-accent/70 shadow-[0_0_50px_hsl(var(--accent)/0.45)] transition-transform duration-700 hover:scale-105">
+              <img
+                src="https://i.postimg.cc/GmTpDwGC/IMG-3809.jpg"
+                alt="Karthik Setti - SSO Cloud Solutions Engineer"
                 className="w-full h-full object-cover object-center"
               />
             </div>
-            
-            {/* Enhanced floating icons with better animation */}
-            <div className="absolute -top-4 -right-4 w-14 h-14 bg-white dark:bg-security-secondary rounded-full flex items-center justify-center shadow-lg floating backdrop-blur-sm border border-gray-100 dark:border-gray-700">
-              <Shield className="text-security-accent" size={24} />
+
+            <div className="absolute -top-4 -right-4 w-14 h-14 bg-card/90 rounded-full flex items-center justify-center shadow-lg floating backdrop-blur-sm border border-accent/30">
+              <Shield className="text-accent" size={24} />
             </div>
-            
-            <div className="absolute -bottom-2 -left-4 w-12 h-12 bg-white dark:bg-security-secondary rounded-full flex items-center justify-center shadow-lg floating backdrop-blur-sm border border-gray-100 dark:border-gray-700" style={{animationDelay: "1.5s"}}>
-              <Key className="text-security-accent" size={20} />
+            <div className="absolute -bottom-2 -left-4 w-12 h-12 bg-card/90 rounded-full flex items-center justify-center shadow-lg floating backdrop-blur-sm border border-accent/30" style={{ animationDelay: '1.5s' }}>
+              <Key className="text-accent" size={20} />
             </div>
-            
-            <div className="absolute top-1/4 -right-10 w-10 h-10 bg-white dark:bg-security-secondary rounded-full flex items-center justify-center shadow-lg floating backdrop-blur-sm border border-gray-100 dark:border-gray-700" style={{animationDelay: "2.5s"}}>
-              <Lock className="text-security-accent" size={18} />
+            <div className="absolute top-1/4 -right-10 w-10 h-10 bg-card/90 rounded-full flex items-center justify-center shadow-lg floating backdrop-blur-sm border border-accent/30" style={{ animationDelay: '2.5s' }}>
+              <Lock className="text-accent" size={18} />
             </div>
           </div>
         </div>
