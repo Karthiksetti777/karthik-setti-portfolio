@@ -83,8 +83,8 @@ const Hero = () => {
               {nameText === fullName && showCursor && <span className="text-accent animate-pulse">|</span>}
             </h2>
             <p className="text-base md:text-lg text-primary-foreground/80 mb-8 max-w-2xl leading-relaxed">
-              Enterprise SSO • OAuth / OIDC / SAML • Hybrid Cloud Identity • Production Support.
-              I design and operate identity-driven security solutions that scale to <span className="text-accent font-semibold">25,000+ users</span> and <span className="text-accent font-semibold">30+ enterprise applications</span>.
+              Enterprise SSO • OAuth / OIDC / SAML • Hybrid Cloud Identity • L3 Production Support.
+              <span className="text-accent font-semibold"> 6 years</span> designing and operating identity platforms across financial-services-grade environments.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mt-6">
