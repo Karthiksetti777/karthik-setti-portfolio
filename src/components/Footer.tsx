@@ -8,14 +8,14 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
             <h3 className="text-xl font-bold">Karthik Setti</h3>
-            <p className="text-primary-foreground/70">SSO Cloud Solutions Engineer</p>
+            <p className="text-primary-foreground/70">SSO Cloud Solutions Engineer @ Bank of America</p>
           </div>
 
           <div className="flex space-x-4 items-center">
             <Button
               variant="ghost"
               className="hover:bg-accent/20 hover:text-accent transition-colors p-2"
-              onClick={() => window.open('https://drive.google.com/file/d/1Q0F98HSAX-DaKvoVlvWnnh91UH-MqoeJ/view?usp=sharing', '_blank')}
+              onClick={() => window.open('https://docs.google.com/document/d/1EjGaGqX-lJQF0Z6InPQBZh-_6pOvEWrvj49sLaNC6aI/edit?usp=sharing', '_blank')}
             >
               <FileText size={18} className="mr-2" /> Resume
             </Button>
