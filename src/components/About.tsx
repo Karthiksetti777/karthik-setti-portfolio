@@ -6,7 +6,7 @@ const About = () => {
     { icon: <Users className="h-5 w-5" />, value: "25K+", label: "Users Managed" },
     { icon: <Server className="h-5 w-5" />, value: "30+", label: "Enterprise Apps" },
     { icon: <Activity className="h-5 w-5" />, value: "99.9%", label: "SSO Uptime" },
-    { icon: <Cloud className="h-5 w-5" />, value: "5+", label: "Years Experience" },
+    { icon: <Cloud className="h-5 w-5" />, value: "6+", label: "Years Experience" },
   ];
 
   return (
