@@ -8,7 +8,7 @@ const Hero = () => {
   const [showCursor, setShowCursor] = useState(true);
 
   const fullName = 'Karthik Setti';
-  const fullTitle = 'IAM Engineer II | Ping | Okta | SailPoint | Entra ID | CyberArk';
+  const fullTitle = 'SSO Cloud Solutions Engineer @ Bank of America | Ping | Okta | SailPoint | Entra ID | CyberArk';
 
   useEffect(() => {
     const cursorInterval = setInterval(() => setShowCursor(p => !p), 500);
@@ -83,8 +83,8 @@ const Hero = () => {
               {nameText === fullName && showCursor && <span className="text-accent animate-pulse">|</span>}
             </h2>
             <p className="text-base md:text-lg text-primary-foreground/80 mb-8 max-w-2xl leading-relaxed">
-              Enterprise SSO • OAuth / OIDC / SAML • Hybrid Cloud Identity • Production Support.
-              I design and operate identity-driven security solutions that scale to <span className="text-accent font-semibold">25,000+ users</span> and <span className="text-accent font-semibold">30+ enterprise applications</span>.
+              Enterprise SSO • OAuth / OIDC / SAML • Hybrid Cloud Identity • L3 Production Support.
+              <span className="text-accent font-semibold"> 6 years</span> designing and operating identity platforms across financial-services-grade environments.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mt-6">
@@ -100,7 +100,7 @@ const Hero = () => {
               <Button
                 variant="outline"
                 className="bg-white/5 hover:bg-white/10 text-white font-medium px-6 py-6 rounded-md flex items-center gap-2 border border-white/20 backdrop-blur-sm shadow-lg transition-all duration-300 hover:translate-y-[-2px]"
-                onClick={() => window.open('https://drive.google.com/file/d/1Q0F98HSAX-DaKvoVlvWnnh91UH-MqoeJ/view?usp=sharing', '_blank')}
+                onClick={() => window.open('https://docs.google.com/document/d/1EjGaGqX-lJQF0Z6InPQBZh-_6pOvEWrvj49sLaNC6aI/edit?usp=sharing', '_blank')}
               >
                 Resume <Download size={16} />
               </Button>
