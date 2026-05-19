@@ -8,7 +8,7 @@ const Hero = () => {
   const [showCursor, setShowCursor] = useState(true);
 
   const fullName = 'Karthik Setti';
-  const fullTitle = 'IAM Engineer II | Ping | Okta | SailPoint | Entra ID | CyberArk';
+  const fullTitle = 'SSO Cloud Solutions Engineer @ Bank of America | Ping | Okta | SailPoint | Entra ID | CyberArk';
 
   useEffect(() => {
     const cursorInterval = setInterval(() => setShowCursor(p => !p), 500);
