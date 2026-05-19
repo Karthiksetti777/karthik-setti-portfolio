@@ -16,10 +16,10 @@ const About = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div className="md:col-span-2 animate-on-scroll space-y-5">
           <p className="text-lg leading-relaxed text-foreground/85">
-            I am an <span className="font-semibold text-accent">IAM Engineer II</span> with 5+ years of hands-on experience designing, deploying, and operating enterprise identity platforms across hybrid cloud environments. My focus is on <strong>federation, lifecycle automation, and production-grade reliability</strong> using PingFederate, Okta, SailPoint IdentityIQ, Microsoft Entra ID, and CyberArk.
+            I am an <span className="font-semibold text-accent">Identity and Access Management (IAM) Engineer</span> with <strong>6 years of experience</strong> in IAM, SSO, MFA, identity governance, and cloud security across enterprise environments. I currently work as an <span className="font-semibold text-accent">SSO Cloud Solutions Engineer at Bank of America</span>, with hands-on expertise across PingFederate, PingAccess, PingID, SailPoint IdentityIQ, Okta, CyberArk, Microsoft Entra ID (Azure AD), and AWS.
           </p>
           <p className="text-lg leading-relaxed text-foreground/85">
-            I architect OAuth 2.0, OIDC, and SAML 2.0 flows for customer-facing and workforce applications, harden authentication with MFA and phishing-resistant credentials, and automate identity governance to enforce SOX, HIPAA, and GDPR compliance. I hold an M.S. in Computer Science from the University of North Texas.
+            I integrate and secure enterprise, cloud, and third-party applications using <strong>SAML 2.0, OAuth 2.0, OIDC, LDAP, SCIM, and WS-Federation</strong>, and design authentication policies, federation, identity lifecycle (JML), and privileged access programs. I automate IAM workflows with Python, PowerShell, and Java, and provide L3 production support backed by Splunk monitoring in Agile/DevOps environments. I hold an M.S. in Computer Science from the University of North Texas.
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 pt-4 stagger">
