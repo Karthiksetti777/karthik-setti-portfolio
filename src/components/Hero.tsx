@@ -7,8 +7,8 @@ const Hero = () => {
   const [titleText, setTitleText] = useState('');
   const [showCursor, setShowCursor] = useState(true);
 
-  const fullName = 'Karthik Setti';
-  const fullTitle = 'SSO Cloud Solutions Engineer @ Bank of America | Ping | Okta | SailPoint | Entra ID | CyberArk';
+  const fullName = "HI, I'M KARTHIK";
+  const fullTitle = 'SSO Cloud Solutions Engineer | IAM & Cybersecurity';
 
   useEffect(() => {
     const cursorInterval = setInterval(() => setShowCursor(p => !p), 500);
