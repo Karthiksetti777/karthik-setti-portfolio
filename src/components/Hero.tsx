@@ -7,8 +7,8 @@ const Hero = () => {
   const [titleText, setTitleText] = useState('');
   const [showCursor, setShowCursor] = useState(true);
 
-  const fullName = 'Karthik Setti';
-  const fullTitle = 'SSO Cloud Solutions Engineer @ Bank of America | Ping | Okta | SailPoint | Entra ID | CyberArk';
+  const fullName = "HI, I'M KARTHIK";
+  const fullTitle = 'SSO Cloud Solutions Engineer | IAM & Cybersecurity';
 
   useEffect(() => {
     const cursorInterval = setInterval(() => setShowCursor(p => !p), 500);
@@ -74,7 +74,7 @@ const Hero = () => {
             <p className="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider uppercase rounded-full bg-accent/15 text-accent border border-accent/30">
               Available for new opportunities
             </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-primary-foreground min-h-[4rem] md:min-h-[5rem] lg:min-h-[6rem]">
+            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-extrabold mb-4 text-primary-foreground neon-text min-h-[4rem] md:min-h-[5rem] lg:min-h-[6rem]">
               {nameText}
               {showCursor && nameText !== fullName && <span className="text-accent animate-pulse">|</span>}
             </h1>
@@ -100,7 +100,7 @@ const Hero = () => {
               <Button
                 variant="outline"
                 className="bg-white/5 hover:bg-white/10 text-white font-medium px-6 py-6 rounded-md flex items-center gap-2 border border-white/20 backdrop-blur-sm shadow-lg transition-all duration-300 hover:translate-y-[-2px]"
-                onClick={() => window.open('https://docs.google.com/document/d/1EjGaGqX-lJQF0Z6InPQBZh-_6pOvEWrvj49sLaNC6aI/edit?usp=sharing', '_blank')}
+                onClick={() => window.open('https://docs.google.com/document/d/18gFx9FCrq_AMWohj9dIhRQvYlEgxoxYT/edit?usp=sharing&ouid=111672881461766815275&rtpof=true&sd=true', '_blank')}
               >
                 Resume <Download size={16} />
               </Button>

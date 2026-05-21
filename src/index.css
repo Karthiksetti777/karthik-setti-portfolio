@@ -4,81 +4,70 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
-    --foreground: 222 47% 11%;
+    /* Cyberpunk dark navy + neon purple/magenta */
+    --background: 252 65% 6%;            /* #07041A */
+    --foreground: 210 40% 98%;           /* #F8FAFC */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card: 264 64% 9%;                  /* #120824 */
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover: 264 64% 9%;
+    --popover-foreground: 210 40% 98%;
 
-    /* Deep Indigo / Navy */
-    --primary: 222 47% 11%;
+    --primary: 252 65% 6%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 215 25% 27%;
+    --secondary: 264 50% 14%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 264 40% 16%;
+    --muted-foreground: 215 20% 70%;     /* #94A3B8 */
 
-    /* Electric Blue accent */
-    --accent: 217 91% 60%;
+    /* Neon Purple primary accent */
+    --accent: 271 91% 65%;               /* #A855F7 */
     --accent-foreground: 0 0% 100%;
-    --accent-glow: 199 89% 65%;
+    --accent-glow: 330 81% 60%;          /* #EC4899 neon pink */
+    --accent-blue: 199 89% 60%;          /* #38BDF8 */
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 217 91% 60%;
+    --border: 264 40% 20%;
+    --input: 264 40% 20%;
+    --ring: 271 91% 65%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    /* Gradients & shadows */
-    --gradient-hero: linear-gradient(135deg, hsl(222 47% 11%) 0%, hsl(217 91% 22%) 50%, hsl(199 89% 35%) 100%);
+    --gradient-hero: linear-gradient(135deg, #07041A 0%, #120824 50%, #1a0b3d 100%);
     --gradient-accent: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--accent-glow)) 100%);
-    --gradient-section: linear-gradient(180deg, hsl(210 40% 98%) 0%, hsl(214 32% 95%) 100%);
-    --shadow-glow: 0 0 40px hsl(217 91% 60% / 0.35);
-    --shadow-elevated: 0 20px 50px -20px hsl(222 47% 11% / 0.25);
-    --shadow-card: 0 4px 20px -4px hsl(222 47% 11% / 0.1);
+    --gradient-section: linear-gradient(180deg, #07041A 0%, #0b0620 100%);
+    --shadow-glow: 0 0 40px hsl(var(--accent) / 0.5);
+    --shadow-neon: 0 0 30px hsl(var(--accent) / 0.45), 0 0 60px hsl(var(--accent-glow) / 0.3);
+    --shadow-elevated: 0 20px 50px -10px hsl(271 91% 65% / 0.35);
+    --shadow-card: 0 8px 32px -8px hsl(264 64% 4% / 0.6);
   }
 
   .dark {
-    --background: 222 47% 6%;
+    --background: 252 65% 6%;
     --foreground: 210 40% 98%;
-
-    --card: 222 47% 11%;
+    --card: 264 64% 9%;
     --card-foreground: 210 40% 98%;
-
-    --popover: 222 47% 8%;
+    --popover: 264 64% 9%;
     --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222 47% 11%;
-
-    --secondary: 217 33% 17%;
+    --primary: 252 65% 6%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 264 50% 14%;
     --secondary-foreground: 210 40% 98%;
-
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
-
-    --accent: 217 91% 60%;
+    --muted: 264 40% 16%;
+    --muted-foreground: 215 20% 70%;
+    --accent: 271 91% 65%;
     --accent-foreground: 0 0% 100%;
-    --accent-glow: 199 89% 65%;
-
+    --accent-glow: 330 81% 60%;
     --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;
-
-    --border: 217 33% 20%;
-    --input: 217 33% 20%;
-    --ring: 217 91% 60%;
-
-    --gradient-hero: linear-gradient(135deg, hsl(222 47% 6%) 0%, hsl(222 47% 12%) 50%, hsl(217 91% 18%) 100%);
-    --gradient-section: linear-gradient(180deg, hsl(222 47% 8%) 0%, hsl(222 47% 6%) 100%);
-    --shadow-glow: 0 0 40px hsl(217 91% 60% / 0.5);
+    --border: 264 40% 20%;
+    --input: 264 40% 20%;
+    --ring: 271 91% 65%;
   }
 }
 
@@ -218,13 +207,13 @@
   mask-image: radial-gradient(ellipse at center, black 40%, transparent 85%);
 }
 
-/* ===== Cybersecurity pastel hero background ===== */
+/* ===== Cyberpunk neon hero background ===== */
 .cyber-pastel-bg {
   background:
-    radial-gradient(ellipse at 20% 10%, hsl(190 70% 88%) 0%, transparent 55%),
-    radial-gradient(ellipse at 85% 20%, hsl(160 60% 86%) 0%, transparent 50%),
-    radial-gradient(ellipse at 70% 85%, hsl(250 70% 90%) 0%, transparent 55%),
-    linear-gradient(135deg, hsl(220 40% 14%) 0%, hsl(225 45% 18%) 50%, hsl(215 50% 16%) 100%);
+    radial-gradient(ellipse at 18% 15%, hsl(271 91% 35% / 0.55) 0%, transparent 55%),
+    radial-gradient(ellipse at 82% 25%, hsl(330 81% 45% / 0.45) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 90%, hsl(199 89% 40% / 0.4) 0%, transparent 55%),
+    linear-gradient(135deg, #07041A 0%, #120824 50%, #1a0b3d 100%);
   background-size: 200% 200%, 200% 200%, 200% 200%, 100% 100%;
   animation: pastel-shift 22s ease-in-out infinite;
 }
@@ -234,32 +223,32 @@
   50% { background-position: 100% 50%, 0% 50%, 30% 60%, 0 0; }
 }
 
-/* Aurora blobs */
+/* Aurora blobs (neon purple / magenta / blue) */
 .aurora {
   position: absolute;
   border-radius: 9999px;
-  filter: blur(90px);
-  opacity: 0.5;
+  filter: blur(100px);
+  opacity: 0.55;
   z-index: 0;
   mix-blend-mode: screen;
   will-change: transform;
 }
 .aurora-1 {
-  width: 520px; height: 520px;
-  top: -120px; left: -100px;
-  background: radial-gradient(circle, hsl(180 90% 75%) 0%, transparent 70%);
+  width: 540px; height: 540px;
+  top: -140px; left: -120px;
+  background: radial-gradient(circle, hsl(271 91% 60%) 0%, transparent 70%);
   animation: aurora-float 18s ease-in-out infinite;
 }
 .aurora-2 {
-  width: 480px; height: 480px;
-  bottom: -120px; right: -80px;
-  background: radial-gradient(circle, hsl(260 85% 80%) 0%, transparent 70%);
+  width: 500px; height: 500px;
+  bottom: -140px; right: -100px;
+  background: radial-gradient(circle, hsl(330 81% 60%) 0%, transparent 70%);
   animation: aurora-float 22s ease-in-out infinite reverse;
 }
 .aurora-3 {
-  width: 380px; height: 380px;
-  top: 30%; right: 25%;
-  background: radial-gradient(circle, hsl(150 80% 78%) 0%, transparent 70%);
+  width: 400px; height: 400px;
+  top: 28%; right: 22%;
+  background: radial-gradient(circle, hsl(199 89% 60%) 0%, transparent 70%);
   animation: aurora-float 26s ease-in-out infinite;
   animation-delay: -6s;
 }
@@ -296,4 +285,12 @@
 @keyframes scan {
   0% { background-position: -100% 0; }
   100% { background-position: 200% 0; }
+}
+
+/* Display font helper */
+.font-display { font-family: 'Orbitron', 'Poppins', sans-serif; letter-spacing: 0.02em; }
+
+/* Neon glow text */
+.neon-text {
+  text-shadow: 0 0 12px hsl(var(--accent) / 0.6), 0 0 28px hsl(var(--accent-glow) / 0.35);
 }
