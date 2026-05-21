@@ -74,7 +74,7 @@ const Hero = () => {
             <p className="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider uppercase rounded-full bg-accent/15 text-accent border border-accent/30">
               Available for new opportunities
             </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-primary-foreground min-h-[4rem] md:min-h-[5rem] lg:min-h-[6rem]">
+            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-extrabold mb-4 text-primary-foreground neon-text min-h-[4rem] md:min-h-[5rem] lg:min-h-[6rem]">
               {nameText}
               {showCursor && nameText !== fullName && <span className="text-accent animate-pulse">|</span>}
             </h1>
