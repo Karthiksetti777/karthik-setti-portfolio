@@ -15,7 +15,7 @@ const Footer = () => {
             <Button
               variant="ghost"
               className="hover:bg-accent/20 hover:text-accent transition-colors p-2"
-              onClick={() => window.open('https://docs.google.com/document/d/1EjGaGqX-lJQF0Z6InPQBZh-_6pOvEWrvj49sLaNC6aI/edit?usp=sharing', '_blank')}
+              onClick={() => window.open('https://docs.google.com/document/d/18gFx9FCrq_AMWohj9dIhRQvYlEgxoxYT/edit?usp=sharing&ouid=111672881461766815275&rtpof=true&sd=true', '_blank')}
             >
               <FileText size={18} className="mr-2" /> Resume
             </Button>
