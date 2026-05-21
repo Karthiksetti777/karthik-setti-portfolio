@@ -20,7 +20,7 @@ const Contact = () => {
     {
       icon: <MapPin className="h-5 w-5 text-security-accent" />,
       label: "Location",
-      value: "Open to Relocate | Austin, Texas",
+      value: "Open to Relocate | Denver, Colorado",
       href: null
     },
     {
