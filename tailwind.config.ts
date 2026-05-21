@@ -60,7 +60,8 @@ export default {
 				}
 			},
 			fontFamily: {
-				sans: ['Inter', 'Poppins', 'sans-serif'],
+				sans: ['Poppins', 'Inter', 'sans-serif'],
+				display: ['Orbitron', 'Poppins', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
