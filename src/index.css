@@ -207,13 +207,13 @@
   mask-image: radial-gradient(ellipse at center, black 40%, transparent 85%);
 }
 
-/* ===== Cybersecurity pastel hero background ===== */
+/* ===== Cyberpunk neon hero background ===== */
 .cyber-pastel-bg {
   background:
-    radial-gradient(ellipse at 20% 10%, hsl(190 70% 88%) 0%, transparent 55%),
-    radial-gradient(ellipse at 85% 20%, hsl(160 60% 86%) 0%, transparent 50%),
-    radial-gradient(ellipse at 70% 85%, hsl(250 70% 90%) 0%, transparent 55%),
-    linear-gradient(135deg, hsl(220 40% 14%) 0%, hsl(225 45% 18%) 50%, hsl(215 50% 16%) 100%);
+    radial-gradient(ellipse at 18% 15%, hsl(271 91% 35% / 0.55) 0%, transparent 55%),
+    radial-gradient(ellipse at 82% 25%, hsl(330 81% 45% / 0.45) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 90%, hsl(199 89% 40% / 0.4) 0%, transparent 55%),
+    linear-gradient(135deg, #07041A 0%, #120824 50%, #1a0b3d 100%);
   background-size: 200% 200%, 200% 200%, 200% 200%, 100% 100%;
   animation: pastel-shift 22s ease-in-out infinite;
 }
@@ -223,32 +223,32 @@
   50% { background-position: 100% 50%, 0% 50%, 30% 60%, 0 0; }
 }
 
-/* Aurora blobs */
+/* Aurora blobs (neon purple / magenta / blue) */
 .aurora {
   position: absolute;
   border-radius: 9999px;
-  filter: blur(90px);
-  opacity: 0.5;
+  filter: blur(100px);
+  opacity: 0.55;
   z-index: 0;
   mix-blend-mode: screen;
   will-change: transform;
 }
 .aurora-1 {
-  width: 520px; height: 520px;
-  top: -120px; left: -100px;
-  background: radial-gradient(circle, hsl(180 90% 75%) 0%, transparent 70%);
+  width: 540px; height: 540px;
+  top: -140px; left: -120px;
+  background: radial-gradient(circle, hsl(271 91% 60%) 0%, transparent 70%);
   animation: aurora-float 18s ease-in-out infinite;
 }
 .aurora-2 {
-  width: 480px; height: 480px;
-  bottom: -120px; right: -80px;
-  background: radial-gradient(circle, hsl(260 85% 80%) 0%, transparent 70%);
+  width: 500px; height: 500px;
+  bottom: -140px; right: -100px;
+  background: radial-gradient(circle, hsl(330 81% 60%) 0%, transparent 70%);
   animation: aurora-float 22s ease-in-out infinite reverse;
 }
 .aurora-3 {
-  width: 380px; height: 380px;
-  top: 30%; right: 25%;
-  background: radial-gradient(circle, hsl(150 80% 78%) 0%, transparent 70%);
+  width: 400px; height: 400px;
+  top: 28%; right: 22%;
+  background: radial-gradient(circle, hsl(199 89% 60%) 0%, transparent 70%);
   animation: aurora-float 26s ease-in-out infinite;
   animation-delay: -6s;
 }
