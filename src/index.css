@@ -286,3 +286,11 @@
   0% { background-position: -100% 0; }
   100% { background-position: 200% 0; }
 }
+
+/* Display font helper */
+.font-display { font-family: 'Orbitron', 'Poppins', sans-serif; letter-spacing: 0.02em; }
+
+/* Neon glow text */
+.neon-text {
+  text-shadow: 0 0 12px hsl(var(--accent) / 0.6), 0 0 28px hsl(var(--accent-glow) / 0.35);
+}
